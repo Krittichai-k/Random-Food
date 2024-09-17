@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="RANDOM FOOD.png" alt="Logo">
+            <img src="image/RANDOM FOOD.png" alt="Logo">
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -27,49 +27,18 @@
                 <th>ประเภท</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>ผัดไทย</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
-            <tr>
-                <td>ข้าวผัด</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
-            <tr>
-                <td>ต้มยำกุ้ง</td>
-                <td>แกง</td>
-            </tr>
-            <tr>
-                <td>ข้าวหมูกรอบ</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
-            <tr>
-                <td>ส้มตำ</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
-            <tr>
-                <td>ขนมจีน</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
-            <tr>
-                <td>ก๋วยเตี๋ยว</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
-            <tr>
-                <td>ข้าวมันไก่</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
-            <tr>
-                <td>ข้าวหมูแดง</td>
-                <td>อาหารจานเดียว</td>
-            </tr>
+        <tbody id="foodTable">
+
         </tbody>
     </table>
 
-    <!-- <footer>
-        <p>&copy; 2024 | Krittichai</p>
-    </footer> -->
+    <script src="foods.js"></script>
+    <script>
+    document.getElementById('foodTable').innerHTML = Object.entries({ ...foods.halal, ...foods.nonHalal })
+        .map(([name, type]) => `<tr><td>${name}</td><td>${type}</td></tr>`)
+        .join('');
+    </script>
+    
 </body>
 
 </html>

@@ -65,7 +65,9 @@ nav li a:active {
 }
 
 .random {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -99,7 +101,18 @@ body .container p {
 }
 
 body .container img {
-    opacity: 0.8;
+    width: 90%;
+    margin-top: 20px;
+}
+
+body .container select {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 table {
@@ -130,4 +143,18 @@ footer {
 footer p {
     margin: 0;
     color: whitesmoke;
+}
+
+@media (max-width: 600px){
+    .random img{
+        height: 290px;
+    }
+
+    table {
+        justify-content: center;
+        border-collapse: collapse;
+        width: 80%;
+        margin: 40px auto;
+        margin-bottom: 290px;
+    }
 }

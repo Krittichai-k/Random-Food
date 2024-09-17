@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="RANDOM FOOD.png" alt="Logo">
+            <img src="image/RANDOM FOOD.png" alt="Logo">
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -22,16 +22,20 @@
 
     <div class="container">
         <div class="random">
-            <img src="RANDOM FOOD.png">
-            <p id="food-display"></p>
-            <button onclick="displayRandomFood()">สุ่มอาหาร</button>
+            <img src="image/boy.png">
+            <select id="foodCategory">
+                <option value="" disabled selected>โปรดเลือก</option>
+                <option value="halal">ฮาลาล</option>
+                <option value="nonHalal">ไม่ฮาลาล</option>
+                <option value="nonHalal">ทั้งหมดในหมวดหมู่</option>
+            </select>
+            <p id="food"></p>
+            <button onclick="randomFood()">สุ่มอาหาร</button>
         </div>
-        <script src="main.js"></script>
+        <script src="foods.js"></script>
+        <script src="script.js"></script>
     </div>
 
-    <!-- <footer>
-        <p>&copy; 2024 | Krittichai</p>
-    </footer>
-</body> -->
+</body>
 
 </html>
